@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Flipper</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <nav>
+    <div class="nav-center">
+      <h4>Color Flipper</h4>
+      <h4><a href="test.html">Simple</a></h4>
+      <h4><a href="hex.html">Hex</a></h4>
+      <!-- <ul class="nav-links">
+        <li><a href="index.html">simple</a></li>
+        <li><a href="hex.html">hex</a></li>
+      </ul> -->
+    </div>
+  </nav>
+  <main>
+    <div class="container">
+      <h2>background color : <span class="color">#f1f5f8</span></h2>
+      <button type="button" class="butn" id="btn">Change</button>
+    </div>
+  </main>
+  <script>
+    const colors = [
+      "Red",
+      "orange",
+      "yellow",
+      "green",
+      "blue",
+      "indigo",
+      "violet",
+    ];
+    const button = document.getElementById("btn");
+    const color = document.querySelector(".color");
+
+    button.addEventListener("click", () => {
+      const randomNumber = getRandomNumber();
+      //   console.log(document.body);
+      document.body.style.backgroundColor = colors[randomNumber];
+      color.textContent = colors[randomNumber];
+    });
+    const getRandomNumber = function () {
+      return Math.floor(Math.random() * colors.length);
+    };
+  </script>
+</html>
