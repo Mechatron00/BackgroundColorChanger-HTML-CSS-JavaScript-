@@ -5,3 +5,4 @@
 
 # ColorFlipper-HTML-CSS-JavaScript-
  
+open new app exe file whichever is compatible with you system.Enjoy!!!!! playing with colors
